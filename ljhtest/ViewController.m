@@ -10,6 +10,8 @@
 
 @interface ViewController ()
 
+@property (nonatomic,strong) NSMutableArray *_datasource;
+
 @end
 
 @implementation ViewController
@@ -25,6 +27,10 @@
     NSLog(@"12345");
 
 
+    if (!__datasource) {
+        __datasource = [[NSMutableArray alloc]init];
+    }
+    
 }
 
 - (void)didReceiveMemoryWarning {
